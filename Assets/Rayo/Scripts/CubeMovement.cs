@@ -18,7 +18,7 @@ public class CubeMovement : MonoBehaviour
     [SerializeField]
     private float maxHeight = 0.707f;
     [SerializeField]
-    private float finalHeight = 0.75f;
+    private float finalHeight = 0.51f;
 
     private float _rotated = 0;
     private Vector3 _rotationVector;
