@@ -14,16 +14,27 @@ public class ArrowInformation : MonoBehaviour
     [SerializeField]
     private Vector3 direction;
 
+    private CubeMovement cubeMovement;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        cubeMovement = cube.GetComponentInParent<CubeMovement>();
     }
-
     private void OnMouseDown()
     {
-        cube.GetComponent<CubeMovement>().MoveCube(direction);
+        if (cubeMovement && !cubeMovement.isMoving())
+        {
+            cube.GetComponent<CubeMovement>().MoveCube(direction);
+        }
+       
+    }
+
+    private void Update()
+    {
+        if(cubeMovement != null)
+        {
+            GetComponent<Renderer>().enabled = !cubeMovement.isMoving();
+        }
+        
     }
 }
