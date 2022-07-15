@@ -32,7 +32,7 @@ public class CubeMovement : MonoBehaviour
 
             if (degrees > _rotated)
             {
-                transform.GetChild(0).Rotate(_rotationVector * (Time.deltaTime / timespan));
+                transform.GetChild(0).Rotate(_rotationVector * (Time.deltaTime / timespan),Space.World);
             }
             else
             {
@@ -54,7 +54,7 @@ public class CubeMovement : MonoBehaviour
         newDirection.Normalize();
 
         // Rotation
-        _rotationVector = new Vector3(-newDirection.z * degrees, 0, -newDirection.x * degrees);
+        _rotationVector = new Vector3(newDirection.z * degrees, 0, -newDirection.x * degrees);
 
         moving = true;
     }

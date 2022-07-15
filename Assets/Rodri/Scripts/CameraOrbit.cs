@@ -26,7 +26,7 @@ public class CameraOrbit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         angle.y += 1 * Mathf.Deg2Rad * sensitivity.y;
         angle.y = Mathf.Clamp(angle.y, -50 * Mathf.Deg2Rad, -10 * Mathf.Deg2Rad);
         cam = GetComponent<Camera>();
