@@ -96,7 +96,7 @@ Material:
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 1.0592737, g: 1.0592737, b: 1.0592737, a: 1}
+    - _FaceColor: {r: 1.4980392, g: 1.4980392, b: 1.4980392, a: 0.49803922}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
@@ -162,11 +162,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Gameplay SDF
+  m_Name: Goal
   m_EditorClassIdentifier: 
-  hashCode: 725817915
+  hashCode: 2586405
   material: {fileID: -7522513162726184486}
-  materialHashCode: 44360507
+  materialHashCode: 1251175141
   m_Version: 1.1.0
   m_SourceFontFileGUID: 82037e4346bcd384f8ae65766dd6a3ee
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 82037e4346bcd384f8ae65766dd6a3ee, type: 3}
@@ -348,20 +348,6 @@ MonoBehaviour:
       m_Height: 85
     m_Scale: 1
     m_AtlasIndex: 0
-  - m_Index: 61
-    m_Metrics:
-      m_Width: 61.875
-      m_Height: 16.875
-      m_HorizontalBearingX: 0
-      m_HorizontalBearingY: 16.875
-      m_HorizontalAdvance: 67.5
-    m_GlyphRect:
-      m_X: 10
-      m_Y: 10
-      m_Width: 62
-      m_Height: 17
-    m_Scale: 1
-    m_AtlasIndex: 0
   - m_Index: 27
     m_Metrics:
       m_Width: 61.875
@@ -374,6 +360,20 @@ MonoBehaviour:
       m_Y: 150
       m_Width: 62
       m_Height: 85
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 61
+    m_Metrics:
+      m_Width: 61.875
+      m_Height: 16.875
+      m_HorizontalBearingX: 0
+      m_HorizontalBearingY: 16.875
+      m_HorizontalAdvance: 67.5
+    m_GlyphRect:
+      m_X: 10
+      m_Y: 10
+      m_Width: 62
+      m_Height: 17
     m_Scale: 1
     m_AtlasIndex: 0
   m_CharacterTable:
@@ -422,12 +422,12 @@ MonoBehaviour:
     m_GlyphIndex: 26
     m_Scale: 1
   - m_ElementType: 1
-    m_Unicode: 95
-    m_GlyphIndex: 61
-    m_Scale: 1
-  - m_ElementType: 1
     m_Unicode: 57
     m_GlyphIndex: 27
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 95
+    m_GlyphIndex: 61
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: -2646366504009086553}
