@@ -90,7 +90,12 @@ public class CubeMovement : MonoBehaviour
 
     public bool isMoving()
     {
-        return moving || rotating;
+        return moving;
+    }
+
+    public bool isRotating()
+    {
+        return rotating;
     }
     public void changeRotating(bool m)
     {

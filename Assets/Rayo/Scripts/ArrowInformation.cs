@@ -34,7 +34,7 @@ public class ArrowInformation : MonoBehaviour
     {
         if(cubeMovement != null)
         {
-            GetComponent<Renderer>().enabled = !cubeMovement.isMoving();
+            GetComponent<Renderer>().enabled = !cubeMovement.isMoving() || !cubeMovement.isRotating() ;
         }
         
     }
