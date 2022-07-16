@@ -26,10 +26,16 @@ public class CasillaRotar : MonoBehaviour
         {
             transform.Rotate(newDirection * Time.deltaTime* rotateSpeed);
             player.transform.Rotate(newDirection * Time.deltaTime * rotateSpeed,Space.World);
-            if (transform.rotation.eulerAngles.y >= 89.9f)
+            if (rotaIzquierda && transform.rotation.eulerAngles.y >= 89.9f)
             {
                 rotating = false;
-                transform.rotation = Quaternion.Euler(new Vector3(transform.localRotation.x,0,transform.localRotation.z));
+                transform.rotation = Quaternion.Euler(new Vector3(transform.localRotation.x, 0, transform.localRotation.z));
+                player.GetComponentInParent<CubeMovement>().changeRotating(false);
+            }
+            else if (!rotaIzquierda && transform.rotation.eulerAngles.y <= 270.9f)
+            {
+                rotating = false;
+                transform.rotation = Quaternion.Euler(new Vector3(transform.localRotation.x, 0, transform.localRotation.z));
                 player.GetComponentInParent<CubeMovement>().changeRotating(false);
             }
         }

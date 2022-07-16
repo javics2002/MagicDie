@@ -27,6 +27,7 @@ public class CubeMovement : MonoBehaviour
     private float _rotated = 0;
     private Vector3 _rotationVector;
 
+    [SerializeField]
     private bool rotating = false;
 
     private void Update()
