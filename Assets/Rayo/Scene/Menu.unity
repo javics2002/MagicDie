@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457b344cf0b50714f915810410d167e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newSceneName: Rodri1
+  newSceneName: Nivel 1
 --- !u!114 &643487426
 MonoBehaviour:
   m_ObjectHideFlags: 0
