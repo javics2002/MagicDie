@@ -27,8 +27,10 @@ public class CameraOrbit : MonoBehaviour
     void Start()
     {
         //Cursor.lockState = CursorLockMode.Locked;
-        angle.y += 1 * Mathf.Deg2Rad * sensitivity.y;
-        angle.y = Mathf.Clamp(angle.y, -50 * Mathf.Deg2Rad, -10 * Mathf.Deg2Rad);
+        //angle.y += 1 * Mathf.Deg2Rad * sensitivity.y;
+        //angle.y = Mathf.Clamp(angle.y, -50 * Mathf.Deg2Rad, -10 * Mathf.Deg2Rad);
+
+        angle = new Vector2(45, Mathf.Lerp(limitOffsetY1, limitOffsetY2, 0.5f)) * Mathf.Deg2Rad;
         cam = GetComponent<Camera>();
     }
 
