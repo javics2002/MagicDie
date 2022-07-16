@@ -13,6 +13,9 @@ EditorBuildSettings:
     guid: 9bf5044e3178adc44a9fe5212c853f3d
   - enabled: 1
     path: Assets/Javi/Scenes/Nivel 1.unity
+    guid: c3efa537640af304a97d37792952c2dc
+  - enabled: 1
+    path: Assets/Javi/Scenes/Nivel 2.unity
     guid: 2bb5728c1123f644782bc65800f7b6f4
   - enabled: 1
     path: Assets/Rayo/Scene/Test 1.unity
