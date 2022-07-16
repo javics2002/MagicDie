@@ -10,6 +10,8 @@ public class CubeMovement : MonoBehaviour
     [SerializeField]
     private bool moving = false;
     [SerializeField]
+    private bool won = false;
+    [SerializeField]
     private Vector3 newDirection;
     [SerializeField]
     private float degrees = 90f;
@@ -21,6 +23,8 @@ public class CubeMovement : MonoBehaviour
     private float finalHeight = 0.51f;
     [SerializeField]
     private float spawnSpeed = 0.7f;
+    [SerializeField]
+    private float wonSpeed = 2.5f;
 
     private float _rotated = 0;
     private Vector3 _rotationVector;
@@ -73,7 +77,11 @@ public class CubeMovement : MonoBehaviour
             }
                 
         }
-        
+
+        if (won && !moving)
+        {
+            transform.Translate(new Vector3(0, wonSpeed * Time.deltaTime, 0), Space.World);
+        }
     }
 
     public void MoveCube(Vector3 direction)
@@ -101,4 +109,9 @@ public class CubeMovement : MonoBehaviour
     {
         rotating = m;
     }
+    public void setWon(bool newState)
+    {
+        won = newState;
+    }
+
 }

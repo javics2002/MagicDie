@@ -26,8 +26,8 @@ public class FaceCollision : MonoBehaviour
 
             if(n == other.GetComponent<Goal>().getNumber()) // Win
             {
-                other.transform.GetComponent<Goal>().enabled = false;
-                Destroy(other.transform.GetChild(0).gameObject);
+                other.GetComponent<Goal>().setWon(true);
+                GetComponentInParent<CubeMovement>().setWon(true);
             }
         }
 
