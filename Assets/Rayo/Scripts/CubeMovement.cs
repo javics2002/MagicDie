@@ -26,6 +26,7 @@ public class CubeMovement : MonoBehaviour
     private Vector3 _rotationVector;
 
     private bool starting = true;
+    private bool rotating = false;
 
     private void Update()
     {
@@ -89,6 +90,10 @@ public class CubeMovement : MonoBehaviour
 
     public bool isMoving()
     {
-        return moving;
+        return moving || rotating;
+    }
+    public void changeRotating(bool m)
+    {
+        rotating = m;
     }
 }
