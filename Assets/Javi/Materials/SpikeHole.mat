@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wireframe
+  m_Name: SpikeHole
   m_Shader: {fileID: -6465566751694194690, guid: d5d4bcf86212c0c4898b6e5b5afb9e31, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Tile:
-        m_Texture: {fileID: 2800000, guid: c166a517d5d0c4c40936a5ae99addcd6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 89d4a92921274f04b9153aa173a9ccc8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -46,7 +46,7 @@ Material:
     - _DecalMeshDepthBias: 0
     - _DecalMeshViewBias: 0
     - _DrawOrder: 0
-    - _Radius: 0.78
+    - _Radius: 0.2
     m_Colors:
-    - _Tiling: {r: 10, g: 10, b: 0, a: 0}
+    - _Tiling: {r: 1.66, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
