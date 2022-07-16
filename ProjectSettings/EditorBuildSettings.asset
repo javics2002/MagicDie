@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Rayo/Scene/Menu.unity
+    guid: 060dad5e895de7e49ad9049f3b8036e8
+  - enabled: 1
+    path: Assets/Rayo/Scene/Settings.unity
+    guid: 9bf5044e3178adc44a9fe5212c853f3d
+  - enabled: 1
+    path: Assets/Rodri/Rodri1.unity
+    guid: b536fb3724504e446a55f622f184d652
   m_configObjects: {}
