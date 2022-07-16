@@ -5,9 +5,11 @@ using TMPro;
 
 public class CasillaNormal : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+
+
+    private void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<Casilla>().enabled)
+        if (other.GetComponent<Casilla>()!=null && other.GetComponent<Casilla>().enabled)
         {
             int n = int.Parse(transform.GetChild(0).GetComponent<TextMeshPro>().text);
 

@@ -15,14 +15,15 @@ public class ArrowInformation : MonoBehaviour
     private Vector3 direction;
 
     private CubeMovement cubeMovement;
+    private CasillaRotar casillaRotar;
 
     private void Start()
     {
-        cubeMovement = cube.GetComponentInParent<CubeMovement>();
+        cubeMovement = cube.GetComponentInParent<CubeMovement>(); 
     }
     private void OnMouseDown()
     {
-        if (cubeMovement && !cubeMovement.isMoving())
+        if (cubeMovement && !cubeMovement.isMoving() )
         {
             cube.GetComponent<CubeMovement>().MoveCube(direction);
         }
