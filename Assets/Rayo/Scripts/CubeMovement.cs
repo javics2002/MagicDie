@@ -57,8 +57,17 @@ public class CubeMovement : MonoBehaviour
                 _rotated = 0;
 
                 transform.SetPositionAndRotation(new Vector3(transform.position.x, finalHeight, transform.position.z), transform.rotation);
-                
-                transform.GetChild(0).rotation = Quaternion.Euler(new Vector3(Mathf.Round(transform.GetChild(0).localEulerAngles.x), Mathf.Round(transform.GetChild(0).localEulerAngles.y), Mathf.Round(transform.GetChild(0).localEulerAngles.z)));
+
+                Vector3 newAngles = transform.GetChild(0).localEulerAngles;
+                newAngles /= 90f;
+
+                newAngles.x = Mathf.Round(newAngles.x);
+                newAngles.y = Mathf.Round(newAngles.y);
+                newAngles.z = Mathf.Round(newAngles.z);
+
+                newAngles *= 90f;
+
+                transform.GetChild(0).rotation = Quaternion.Euler(newAngles);
                 
                 moving = false;
             }
@@ -100,5 +109,8 @@ public class CubeMovement : MonoBehaviour
     {
         won = newState;
     }
-
+    public bool getWon()
+    {
+        return won;
+    }
 }
