@@ -2010,7 +2010,7 @@
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.GroupData",
     "m_ObjectId": "7f42fb9979194e219a862fe0c46a3c3c",
-    "m_Title": "Lateral OFfset",
+    "m_Title": "Lateral Offset",
     "m_Position": {
         "x": -1693.5999755859375,
         "y": 706.4000244140625
