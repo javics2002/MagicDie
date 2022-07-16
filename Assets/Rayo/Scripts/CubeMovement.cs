@@ -19,6 +19,8 @@ public class CubeMovement : MonoBehaviour
     private float maxHeight = 0.707f;
     [SerializeField]
     private float finalHeight = 0.51f;
+    [SerializeField]
+    private float spawnSpeed = 0.7f;
 
     private float _rotated = 0;
     private Vector3 _rotationVector;
@@ -29,7 +31,7 @@ public class CubeMovement : MonoBehaviour
     {
         if (starting)
         {
-            transform.Translate(new Vector3(0, 0.7f * Time.deltaTime, 0));
+            transform.Translate(new Vector3(0, spawnSpeed * Time.deltaTime, 0));
 
             if(transform.position.y >= finalHeight)
             {

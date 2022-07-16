@@ -8,11 +8,22 @@ public class Casilla : MonoBehaviour
 
     public bool suma;
     public int number;
+    public Gradient color;
     // Start is called before the first frame update
     void Start()
     {
-        if (suma) transform.GetChild(0).GetComponent<TextMeshPro>().text = "+" + number;
-        else transform.GetChild(0).GetComponent<TextMeshPro>().text = "-" + number;
+        TextMeshPro textMeshPro = transform.GetChild(0).GetComponent<TextMeshPro>();
+
+        if (suma)
+        {
+            textMeshPro.text = number.ToString();
+            textMeshPro.color = color.Evaluate(.5f + number / 6f);
+        }
+        else
+        {
+            textMeshPro.text = "-" + number;
+            textMeshPro.color = color.Evaluate(.5f - number / 6f);
+        }
     }
 
     public bool isSuma()

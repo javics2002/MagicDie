@@ -11,8 +11,6 @@ public class CasillaNormal : MonoBehaviour
         {
             int n = int.Parse(transform.GetChild(0).GetComponent<TextMeshPro>().text);
 
-            Debug.Log(n);
-
             if (other.GetComponent<Casilla>().isSuma())
                 n += other.GetComponent<Casilla>().num();
             else n -= other.GetComponent<Casilla>().num();
