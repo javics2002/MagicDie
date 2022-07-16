@@ -10,16 +10,16 @@ public class TriggerInformation : MonoBehaviour
     [SerializeField]
     private bool isTriggered = false;
 
+    MeshRenderer arrowRenderer;
+
+    private void Start()
+    {
+        arrowRenderer = arrow.GetComponent<MeshRenderer>();
+    }
+
     private void Update()
     {
-        if (isTriggered)
-        {
-            arrow.gameObject.SetActive(true);
-        }
-        else
-        {
-            arrow.gameObject.SetActive(false);
-        }
+        arrowRenderer.enabled = isTriggered;
     }
     private void OnTriggerStay(Collider other)
     {

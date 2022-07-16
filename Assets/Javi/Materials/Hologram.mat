@@ -35,6 +35,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Alpha: 1
+    - _NoiseAmount: 0.1
     - _Power: 0.7
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -42,6 +43,8 @@ Material:
     m_Colors:
     - _Color: {r: 1.661091, g: 1.773585, b: 0.47686, a: 1}
     - _HologramAlpha: {r: 0.4, g: 1, b: 0, a: 0}
+    - _NoiseSpeed: {r: 0.1, g: 0.3, b: 0.02, a: 0}
+    - _NoiseTiling: {r: 2, g: 9.64, b: 2, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1478883475751598786
 MonoBehaviour:
