@@ -176,11 +176,33 @@ public class GDTFadeEffect : MonoBehaviour
     public void StartEffect()
     {
         performEffect = true;
+    }
+
+    public void StartEffect2()
+    {
+        Color aux = firstColor;
+        firstColor = lastColor;
+        lastColor = aux;
+
+        currentValue = 0f;
+
+        performEffect = true;
+    }
+
+    public void StartFadeOut()
+    {
+        Invoke("StartEffect", initialDelay);
         finished = false;
     }
 
-    public void StartAnimation()
+    public void StartFadeIn()
     {
-        Invoke("StartEffect", initialDelay);
+        Invoke("StartEffect2", initialDelay);
+        finished = false;
+    }
+
+    public bool isFinished()
+    {
+        return finished;
     }
 }

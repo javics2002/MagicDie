@@ -20,7 +20,7 @@ public class FaceCollision : MonoBehaviour
 
             transform.GetChild(0).GetComponent<TextMeshPro>().text = n.ToString();
         }
-        else if(other.GetComponent<Goal>() != null && other.GetComponent<Goal>().enabled)
+        else if(other.GetComponent<Goal>() != null && other.GetComponent<Goal>().enabled && !other.GetComponent<Goal>().getWon())
         {
             int n = int.Parse(transform.GetChild(0).GetComponent<TextMeshPro>().text);
 

@@ -22,28 +22,15 @@ public class CubeMovement : MonoBehaviour
     [SerializeField]
     private float finalHeight = 0.51f;
     [SerializeField]
-    private float spawnSpeed = 0.7f;
-    [SerializeField]
     private float wonSpeed = 2.5f;
 
     private float _rotated = 0;
     private Vector3 _rotationVector;
 
-    private bool starting = true;
     private bool rotating = false;
 
     private void Update()
     {
-        if (starting)
-        {
-            transform.Translate(new Vector3(0, spawnSpeed * Time.deltaTime, 0));
-
-            if(transform.position.y >= finalHeight)
-            {
-                starting = false;
-            }
-        }
-
         if (moving)
         {
             transform.Translate(newDirection * (Time.deltaTime / timespan));
