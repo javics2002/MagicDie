@@ -16,13 +16,11 @@ public class SFXButton : MonoBehaviour, ISelectHandler, IPointerEnterHandler
     {
         // Do something.
         sfx.Play();
-        Debug.Log("<color=red>Event:</color> Completed mouse highlight.");
     }
     // When selected.
     public void OnSelect(BaseEventData eventData)
     {
         // Do something.
         sfx2.Play();
-        Debug.Log("<color=red>Event:</color> Completed selection.");
     }
 }

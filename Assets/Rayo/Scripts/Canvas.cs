@@ -35,7 +35,7 @@ public class Canvas : MonoBehaviour
         {
             hue = Random.Range(0f, 1f);
         }
-        titleImage.color = Color.HSVToRGB(hue, sat, bri);
+        //titleImage.color = Color.HSVToRGB(hue, sat, bri);
 
         direction = 1;
     }
@@ -43,7 +43,7 @@ public class Canvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ColorUpdate();
+        //ColorUpdate();
         MovementUpdate();
     }
 

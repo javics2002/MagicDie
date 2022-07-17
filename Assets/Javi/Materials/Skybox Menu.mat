@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Skybox Menu
-  m_Shader: {fileID: -6465566751694194690, guid: 73ee6e031115c914681890a184aa7b05, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 3d7f67a0c7af76d43a42f1ae0995dc93, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -51,9 +51,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ColorStrength: 0.679
-    - _CutoffHeight: 0.91
-    - _CutoffThickness: 2
+    - _ColorStrength: 0.464
+    - _CutoffHeight: 5.8
+    - _CutoffThickness: 6.05
     - _GradientForce: 1
     - _GradientHeight: 0.5
     - _QueueControl: 0
@@ -62,8 +62,8 @@ Material:
     - _TextureStrength: 0.5
     m_Colors:
     - _BottomColor: {r: 0.014931603, g: 0.0027767888, b: 0.028301895, a: 0}
-    - _Color: {r: 0.8679245, g: 0.60918474, b: 0.84351516, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _PitColor: {r: 0, g: 0, b: 0, a: 0}
-    - _Speed: {r: 0.05, g: -0.07, b: 0, a: 0}
+    - _Speed: {r: 0.025, g: -0.035, b: 0, a: 0}
     - _Tiling: {r: 3, g: 12, b: 0, a: 0}
   m_BuildTextureStacks: []
