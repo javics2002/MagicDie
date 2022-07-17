@@ -147,6 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasTransition: {fileID: 6615717040098704474}
+  exitButton: {fileID: 500655009459160538}
+  button: {fileID: 9146275226258932933}
 --- !u!1 &2954942000215284747
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasTransition: {fileID: 6615717040098704474}
+  resetButton: {fileID: 217062485478973439}
+  button: {fileID: 1522540855072012982}
   newSceneName: Menu
 --- !u!1 &7490346045450813490
 GameObject:
