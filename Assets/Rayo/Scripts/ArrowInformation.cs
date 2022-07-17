@@ -15,8 +15,8 @@ public class ArrowInformation : MonoBehaviour
     private Vector3 direction;
 
     private CubeMovement cubeMovement;
-    private CasillaRotar casillaRotar;
     MeshRenderer meshRenderer;
+    bool triggered = false;
 
     private void Start()
     {
@@ -25,23 +25,23 @@ public class ArrowInformation : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (cubeMovement && !cubeMovement.isMoving() && meshRenderer.enabled)
+        if (cubeMovement && meshRenderer.enabled)
         {
-            cube.GetComponent<CubeMovement>().MoveCube(direction);
+            cubeMovement.MoveCube(direction);
         }
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if(cubeMovement != null)
         {
             if (cubeMovement.getWon())
             {
-                GetComponent<Renderer>().enabled = false;
+                meshRenderer.enabled = false;
             }
             else
             {
-                GetComponent<Renderer>().enabled = !cubeMovement.isMoving() && !cubeMovement.isRotating();
+                meshRenderer.enabled = triggered && !cubeMovement.isMoving() && !cubeMovement.isRotating();
             }
         }
     }
@@ -58,5 +58,10 @@ public class ArrowInformation : MonoBehaviour
         Color color = meshRenderer.material.color;
         color.a = .6f;
         meshRenderer.material.color = color;
+    }
+
+    public void ChangeTriggered(bool b)
+    {
+        triggered = b;
     }
 }

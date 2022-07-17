@@ -18,25 +18,30 @@ public class CasillaRotar : MonoBehaviour
     [SerializeField]
     private float timespan = 0.5f;
 
+    CubeMovement cube;
 
+    private void Start()
+    {
+        cube = player.GetComponentInParent<CubeMovement>();
+    }
 
     private void Update()
     {
-        if (rotating && !player.GetComponentInParent<CubeMovement>().isMoving())
+        if (rotating && !cube.isMoving())
         {
-            transform.Rotate(newDirection * Time.deltaTime* rotateSpeed);
+            transform.Rotate(newDirection * Time.deltaTime* rotateSpeed, Space.World);
             player.transform.Rotate(newDirection * Time.deltaTime * rotateSpeed,Space.World);
             if (rotaIzquierda && transform.rotation.eulerAngles.y >= 89.9f)
             {
                 rotating = false;
                 transform.rotation = Quaternion.Euler(new Vector3(transform.localRotation.x, 0, transform.localRotation.z));
-                player.GetComponentInParent<CubeMovement>().changeRotating(false);
+                cube.changeRotating(false);
             }
             else if (!rotaIzquierda && transform.rotation.eulerAngles.y <= 270.9f)
             {
                 rotating = false;
                 transform.rotation = Quaternion.Euler(new Vector3(transform.localRotation.x, 0, transform.localRotation.z));
-                player.GetComponentInParent<CubeMovement>().changeRotating(false);
+                cube.changeRotating(false);
             }
         }
     }
@@ -46,7 +51,7 @@ public class CasillaRotar : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             rotating = true;
-            player.GetComponentInParent<CubeMovement>().changeRotating(true);
+            cube.changeRotating(true);
             newDirection.Normalize();
         }
     }

@@ -25,18 +25,21 @@ public class FaceCollision : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if(other.GetComponent<Goal>() != null && other.GetComponent<Goal>().enabled && !other.GetComponent<Goal>().getWon())
+        Goal goal = other.GetComponent<Goal>();
+        if(goal != null && goal.enabled && !goal.getWon())
         {
-            int n = int.Parse(transform.GetChild(0).GetComponent<TextMeshPro>().text);
-
-            if(n == other.GetComponent<Goal>().getNumber()) // Win
+            TextMeshPro tm = transform.GetChild(0).GetComponent<TextMeshPro>();
+            if (tm.gameObject.activeSelf)
             {
-                other.GetComponent<Goal>().setWon(true);
-                GetComponentInParent<CubeMovement>().setWon(true);
+                int n = int.Parse(tm.text);
+
+                if (n == goal.getNumber()) // Win
+                {
+                    goal.setWon(true);
+                    GetComponentInParent<CubeMovement>().setWon(true);
+                }
             }
         }
-
-
     }
 
 
@@ -65,6 +68,7 @@ public class FaceCollision : MonoBehaviour
 
         cas.enabled = false;
 
+        Destroy(casilla.transform.GetChild(0).gameObject);
 
 
         yield return new WaitForSeconds(time2);
@@ -73,7 +77,6 @@ public class FaceCollision : MonoBehaviour
         tm.fontSize = 6;
         tm.color = Color.black;
 
-        Destroy(casilla.transform.GetChild(0).gameObject);
 
     }
 }
