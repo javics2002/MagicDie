@@ -30,7 +30,7 @@ public class Canvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        titleImage = transform.GetChild(0).GetComponent<Image>();
+        titleImage = transform.GetChild(0).GetChild(0).GetComponent<Image>();
         if (randomize)
         {
             hue = Random.Range(0f, 1f);
