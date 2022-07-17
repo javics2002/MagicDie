@@ -18,7 +18,9 @@ public class CameraOrbit : MonoBehaviour
 
     public Transform follow;
     public float distance;
-    public Vector2 sensitivity;
+
+    [SerializeField]
+    private Vector2 sensitivity;
 
     private float Y = 0; // set this to 0.2
     private float B = 0; // set this to -0.2
@@ -32,6 +34,8 @@ public class CameraOrbit : MonoBehaviour
 
         angle = new Vector2(45, Mathf.Lerp(limitOffsetY1, limitOffsetY2, 0.5f)) * Mathf.Deg2Rad;
         cam = GetComponent<Camera>();
+
+        sensitivity = GameManager.getInstance().GetCameraInfo();
     }
 
     void Update()
