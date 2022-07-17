@@ -62,6 +62,14 @@ public class FaceCollision : MonoBehaviour
                     sfx2.Play();
                 }
             }
+            else
+            {
+                TextMeshPro otherTM = other.GetComponentInChildren<TextMeshPro>();
+                originalTextColor = otherTM.color;
+                otherTM.color = Color.red;
+                other.transform.GetChild(1).GetComponent<MeshRenderer>().material.SetFloat("_Fail", 1);
+                sfx2.Play();
+            }
         }
         if (other.GetComponent<Spikes>())
         {

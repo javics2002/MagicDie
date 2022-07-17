@@ -69,7 +69,15 @@ public class CubeMovement : MonoBehaviour
                 newAngles *= 90f;
 
                 transform.GetChild(0).rotation = Quaternion.Euler(newAngles);
-                
+
+
+                Vector3 newPosition = transform.position;
+
+                newPosition.x = Mathf.Round(newPosition.x);
+                newPosition.z = Mathf.Round(newPosition.z);
+
+                transform.position = newPosition;
+
                 moving = false;
             }
                 
