@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Javi/Scenes/Nivel 5.unity
     guid: a1fc770fe1964ce4eba6e0ce0e71c7c2
+  - enabled: 1
+    path: Assets/Javi/Scenes/Nivel 6.unity
+    guid: b4b3bbcf13d832949bdd06fd91763274
   m_configObjects: {}
