@@ -18,7 +18,10 @@ public class LevelMusic : MonoBehaviour
 
     public static void Stop()
     {
-        instance = null;
-        Destroy(instance.gameObject);
+        if(instance != null)
+        {
+            instance = null;
+            Destroy(instance.gameObject);
+        }
     }
 }

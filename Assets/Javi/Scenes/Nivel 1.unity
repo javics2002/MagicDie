@@ -5365,6 +5365,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 576293486375259080, guid: 5049c38b743a2b54187224a673ed3615, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928860669851815358, guid: 5049c38b743a2b54187224a673ed3615, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615717040098704475, guid: 5049c38b743a2b54187224a673ed3615, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7490346045450813490, guid: 5049c38b743a2b54187224a673ed3615, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -6210,10 +6222,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1693645142}
     - target: {fileID: 2883325730688625279, guid: 4d7895a721775824a8cacc177567225c, type: 3}
-      propertyPath: newSceneName
-      value: Nivel 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2883325730688625279, guid: 4d7895a721775824a8cacc177567225c, type: 3}
       propertyPath: canvasTransition
       value: 
       objectReference: {fileID: 1181112417}
@@ -6274,10 +6282,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 465628953, guid: 09b291f14376bb34ab30454f60e51a29, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8345147486804399172, guid: 09b291f14376bb34ab30454f60e51a29, type: 3}
       propertyPath: m_Name
       value: Player

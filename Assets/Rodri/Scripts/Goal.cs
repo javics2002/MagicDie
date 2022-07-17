@@ -53,6 +53,8 @@ public class Goal : MonoBehaviour
 
         if (won)
         {
+            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
             canvasTransition.GetComponent<GDTFadeEffect>().StartFadeIn(0.8f);
         }
     }
