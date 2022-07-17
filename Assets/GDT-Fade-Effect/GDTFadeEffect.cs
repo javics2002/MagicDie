@@ -189,15 +189,15 @@ public class GDTFadeEffect : MonoBehaviour
         performEffect = true;
     }
 
-    public void StartFadeOut()
+    public void StartFadeOut(float delay)
     {
-        Invoke("StartEffect", initialDelay);
+        Invoke("StartEffect", delay);
         finished = false;
     }
 
-    public void StartFadeIn()
+    public void StartFadeIn(float delay)
     {
-        Invoke("StartEffect2", initialDelay);
+        Invoke("StartEffect2", delay);
         finished = false;
     }
 
