@@ -13,6 +13,8 @@ public class FaceCollision : MonoBehaviour
     Casilla cas;
 
     [SerializeField]
+    private ParticleSystem pS;
+    [SerializeField]
     private AudioSource sfx1;
     [SerializeField]
     private AudioSource sfx2;
@@ -62,7 +64,11 @@ public class FaceCollision : MonoBehaviour
             }
         }
         if (other.GetComponent<Spikes>())
+        {
             sfx4.Play();
+            pS.Play();
+        }
+
         if (other.GetComponent<CasillaRotar>())
             sfx5.Play();
 
