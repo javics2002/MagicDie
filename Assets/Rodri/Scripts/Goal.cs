@@ -53,7 +53,7 @@ public class Goal : MonoBehaviour
 
         if (won)
         {
-            canvasTransition.GetComponent<GDTFadeEffect>().StartFadeIn();
+            canvasTransition.GetComponent<GDTFadeEffect>().StartFadeIn(0.8f);
         }
     }
 
