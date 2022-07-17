@@ -12,6 +12,19 @@ public class FaceCollision : MonoBehaviour
     TextMeshPro tm;
     Casilla cas;
 
+    [SerializeField]
+    private AudioSource sfx1;
+    [SerializeField]
+    private AudioSource sfx2;
+    [SerializeField]
+    private AudioSource sfx3;
+    [SerializeField]
+    private AudioSource sfx4;
+    [SerializeField]
+    private AudioSource sfx5;
+    [SerializeField]
+    private AudioSource[] sfxNumber; 
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,9 +35,33 @@ public class FaceCollision : MonoBehaviour
             StartCoroutine(suma(n, other.gameObject, .25f, .5f));
 
         }
+        Goal goal = other.GetComponent<Goal>();
+        if (goal != null && goal.enabled && !goal.getWon())
+        {
+            TextMeshPro tm = transform.GetChild(0).GetComponent<TextMeshPro>();
+            if (tm.gameObject.activeSelf)
+            {
+                int n = int.Parse(tm.text);
+
+                if (n != goal.getNumber()) // Win
+                {
+                    sfx2.Play();
+                }
+                else sfx3.Play();
+
+            }
+        }
+        if (other.GetComponent<Spikes>())
+            sfx4.Play();
+        if (other.GetComponent<CasillaRotar>())
+            sfx5.Play();
+
+        if (other.GetComponent<StartBox>() && !other.GetComponent<StartBox>().isStarting()) sfx1.Play();
+        else if(!other.GetComponent<StartBox>())sfx1.Play();
     }
     private void OnTriggerStay(Collider other)
     {
+
         Goal goal = other.GetComponent<Goal>();
         if(goal != null && goal.enabled && !goal.getWon())
         {
@@ -38,6 +75,7 @@ public class FaceCollision : MonoBehaviour
                     goal.setWon(true);
                     GetComponentInParent<CubeMovement>().setWon(true);
                 }
+
             }
         }
     }
@@ -50,14 +88,18 @@ public class FaceCollision : MonoBehaviour
         tm = transform.GetChild(0).GetComponent<TextMeshPro>();
         cas = casilla.GetComponent<Casilla>();
 
+
+
         if (cas.isSuma())
         {
+            sfxNumber[cas.num() + 3].Play();
             n += cas.num();
             tm.text = "+" + cas.num();
             tm.color = color.Evaluate(.5f + cas.num() / 6f);
         }
         else
         {
+            sfxNumber[cas.num()].Play();
             n -= cas.num();
             tm.text = "-" + cas.num();
             tm.color = color.Evaluate(.5f - cas.num() / 6f);

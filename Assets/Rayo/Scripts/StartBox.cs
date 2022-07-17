@@ -33,4 +33,9 @@ public class StartBox : MonoBehaviour
             }
         }
     }
+
+    public bool isStarting()
+    {
+        return starting;
+    }
 }
