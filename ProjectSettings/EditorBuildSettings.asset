@@ -9,18 +9,18 @@ EditorBuildSettings:
     path: Assets/Rayo/Scene/Menu.unity
     guid: 060dad5e895de7e49ad9049f3b8036e8
   - enabled: 1
-    path: Assets/Rayo/Scene/Settings.unity
-    guid: 9bf5044e3178adc44a9fe5212c853f3d
-  - enabled: 1
     path: Assets/Javi/Scenes/Nivel 1.unity
     guid: c3efa537640af304a97d37792952c2dc
   - enabled: 1
     path: Assets/Javi/Scenes/Nivel 2.unity
     guid: 2bb5728c1123f644782bc65800f7b6f4
   - enabled: 1
-    path: Assets/Rayo/Scene/Test 1.unity
-    guid: dcb091879d2024d4c907fb5ace5e9c3b
+    path: Assets/Javi/Scenes/Nivel 3.unity
+    guid: 502271d19b04f6247815a13fd6b95d32
   - enabled: 1
-    path: Assets/Rayo/Scene/Test.unity
-    guid: 734289d88b46455489ce47e191b9b5b4
+    path: Assets/Javi/Scenes/Nivel 4.unity
+    guid: d6ade070c7e911d459a96d3f634aaeb5
+  - enabled: 1
+    path: Assets/Javi/Scenes/Nivel 5.unity
+    guid: a1fc770fe1964ce4eba6e0ce0e71c7c2
   m_configObjects: {}

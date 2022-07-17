@@ -7035,7 +7035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2883325730688625279, guid: 4d7895a721775824a8cacc177567225c, type: 3}
       propertyPath: newSceneName
-      value: Nivel 4
+      value: Nivel 5
       objectReference: {fileID: 0}
     - target: {fileID: 2883325730688625279, guid: 4d7895a721775824a8cacc177567225c, type: 3}
       propertyPath: canvasTransition
